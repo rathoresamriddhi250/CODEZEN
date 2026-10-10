@@ -1,0 +1,339 @@
+Twenty-years-of-skill-and-no-way-to-prove-it
+image Team CODEZEN
+Team Leader: Samriddhi Rathore
+
+USN	Team Member
+2392608227	Maanya Ashchary
+2392608072	Somya Sarkar
+2392608084	Samriddhi Rathore
+2392608182	Princy Suman
+2392608278	Shagun Sagar
+2392608092	Isha Bar
+Team Code: 2392608084 — CODEZEN
+
+Shramik — Skill • Work • Trust Shramik helps skilled workers showcase their skills, record completed jobs, and build trust through shareable digital profiles and QR codes. Our Mission: To help every skilled worker prove their experience, gain recognition, and access better opportunities. Every skill deserves recognition.
+
+Twenty-years-of-skill-and-no-way-to-prove-it.
+🛠️ Shramik — Skill • Work • Trust Shramik helps skilled workers showcase their skills, record completed jobs, and build trust through shareable digital profiles and QR codes. 🎯 Our Mission: To help every skilled worker prove their experience, gain recognition, and access better opportunities. 🧡 Every skill deserves recognition.
+
+🛠️ SHRAMIK — Skill • Work • Trust
+Team Code: 2392608084 — CODEZEN
+
+हर हुनर की पहचान, हर मेहनत का सम्मान।
+
+1. Problem Statement
+Twenty Years of Skill, No Way to Prove It
+A painter, carpenter, tailor, or electrician may have decades of practical experience but no reliable digital record to prove it. Many workers depend on word-of-mouth recommendations to find jobs. When they move to a new city, they may have to rebuild their reputation from scratch.
+
+Customers face a similar problem: they often have no easy way to judge a worker's experience, reliability, or previous work.
+
+2. What Did We Build?
+We developed Shramik, a digital platform concept that helps skilled workers create a professional identity and maintain a record of their skills and completed jobs.
+
+Workers can showcase their experience through shareable profiles and QR codes. Customer-confirmed jobs can provide additional evidence of completed work, helping workers build credibility and giving potential customers more confidence.
+
+3. Why Did We Build It?
+We believe that practical skills deserve recognition, regardless of educational background or access to technology.
+
+Shramik aims to solve the problem of undocumented work experience by making professional records easier to create, maintain, and share.
+
+4. Key Features
+👷 Digital Worker Profiles: Showcase skills and experience.
+🛠️ Skills Record: Display professional trades and abilities.
+📋 Work History: Maintain records of completed jobs.
+✅ Customer Confirmation: Support credibility through confirmed work.
+🔗 Shareable Profiles: Share professional information through a link.
+📱 QR Codes: Make profiles easier to access and share.
+🔒 Privacy-Focused Design: Help workers control the information they share.
+5. How Does Shramik Work?
+A worker creates a digital profile.
+The worker adds skills and relevant experience.
+Completed jobs are recorded on the profile.
+Customers confirm jobs through the supported confirmation process.
+The worker shares their profile or QR code with potential customers.
+Customers can review the available information before deciding whom to hire.
+6. Our Mission
+To help skilled workers prove their experience, build trust, and access better opportunities through a simple and accessible digital identity.
+
+7. Our Vision
+A future where every skilled worker has a way to showcase their abilities and receive recognition for their hard work.
+
+Shramik — Every skill deserves recognition. 🧡
+
+APP ARCHITECTURE
+
+mermaid-diagram (3) FLOW CHART ### `01` Entry Point
+index.ts initializes the Express backend, configures middleware and CORS, and registers API route handlers.
+
+The frontend uses main.tsx and App.tsx to initialize and render the React application.
+
+02 Authentication Flow
+Routes: auth.ts handles registration and login endpoints (when implemented).
+Services: authService.ts manages authentication-related business logic.
+Helpers: Password hashing and token management can be added to secure user accounts.
+User Roles: Shramik supports separate experiences for workers and customers.
+Database: User and authentication data can be stored persistently once a database is integrated.
+03 Protected Routes
+Protected routes can restrict access to authenticated users based on their roles.
+
+Worker routes: Worker profiles, availability, jobs, and bookings.
+Customer routes: Worker discovery, service bookings, and booking history.
+Authentication middleware: Validates user sessions or JWTs when authentication is implemented.
+04 Worker & Customer Management
+Worker profiles: Store trade, skills, experience, and service information.
+Customer management: Support customer profiles and service requests.
+Worker discovery: Help customers find professionals by service category and location.
+Availability: Allow workers to manage available booking slots.
+Bookings: Support booking creation, confirmation, and status management.
+Database persistence and API integration are required for these features to work reliably across sessions.
+
+05 Booking & Location Integration
+Routes: Worker, job, booking, and location endpoints can be organized under the backend routes directory.
+Services: Dedicated services handle worker discovery, booking logic, and location-related operations.
+Location selection: Users can choose an area or provide location details.
+Distance filtering: Accurate nearby-worker search requires real coordinates and distance calculations.
+Booking flow: Customers select a worker, date, and available time slot.
+06 AI Assistant
+Shramik Sahayak uses the Gemini API integration to provide AI-powered assistance when configured.
+
+Chat API: Receives user messages through the backend.
+Gemini integration: Generates responses using the configured API key.
+User guidance: Helps users navigate the platform and understand available features.
+API keys should remain on the server and must never be committed to GitHub.
+
+07 Background Jobs & Notifications
+Background processing can be introduced to support:
+
+Booking reminders and status notifications.
+Availability updates.
+Scheduled cleanup tasks.
+Other asynchronous operations as the platform grows.
+A queue system such as BullMQ with Redis is an optional future enhancement, not a required part of the initial prototype.
+
+08 Deployment & Automation
+GitHub Actions can automate build checks, testing, and deployment workflows.
+
+Continuous integration: Run linting and build checks when code changes.
+Deployment: Publish the frontend and backend to configured hosting services.
+Environment configuration: Store API keys and other secrets securely in deployment settings.
+Scheduled workflows: Add cron-based tasks only when the application requires them.
+The exact workflow depends on the hosting setup and the services implemented in the project.
+
+08 Data Layer
+Data Management & Persistence — Shramik uses a structured data layer to manage worker profiles, customer information, skills, job listings, and bookings. A database and ORM can be integrated to support reliable data storage and type-safe database operations.
+
+Tech Stack
+Technologies used in the current prototype, with proposed additions clearly marked.
+
+Frontend
+React	TypeScript	Tailwind CSS	Vite
+UI Components	Type Safety	Responsive Styling	Development & Build
+Backend & Data Layer
+Express.js	Node.js	Database	Authentication
+REST APIs	Server Runtime	PostgreSQL (planned)	JWT (planned, if not yet implemented)
+AI & Integrations
+Google Gemini API	Shramik Sahayak	Location Services
+AI Model Integration	AI Chat Assistant	Area Selection & Nearby Search
+DevOps & Automation
+GitHub Actions	Redis	Background Jobs	Deployment
+CI/CD (optional)	Caching (planned)	Notifications & Scheduled Tasks (planned)	Hosting (to be configured)
+Core Technologies
+React + TypeScript: Build reusable, maintainable frontend components.
+Tailwind CSS: Create a responsive, mobile-first interface.
+Vite: Run the frontend development server and build production assets.
+Express.js: Provide backend API endpoints.
+Google Gemini API: Power AI-assisted conversations when configured.
+PostgreSQL + Prisma (planned): Support persistent, structured data storage and type-safe database queries.
+GitHub Actions (optional): Automate testing, builds, and deployment workflows.
+Implementation note: The current Shramik prototype uses React, TypeScript, Tailwind CSS, Vite, Express, and Gemini integration. PostgreSQL, Prisma, JWT authentication, Redis, and background-job processing should be listed as planned until they are implemented and tested. Exact dependency versions can be documented from the project's package.json files.
+
+COMPONENT INTERACTION FLOW mermaid-diagram (1)
+
+FRONTEND ARCHITECTURE FLOW mermaid-diagram (2)
+
+BACKEND ARCHITECTURE FLOW mermaid-diagram (4)
+
+Backend Components (Detailed)
+Below is a file-level breakdown of the backend architecture for Shramik, a platform designed to connect skilled workers with customers.
+
+Routes (/backend/src/routes)
+auth.ts — handles registration and login endpoints (/api/auth/*) for workers and customers.
+workers.ts — manages worker profiles, skills, trade categories, availability, and worker discovery (/api/workers/*).
+customers.ts — handles customer profiles and customer-related operations (/api/customers/*).
+bookings.ts — manages booking creation, confirmation, status updates, and booking history (/api/bookings/*).
+jobs.ts — handles job listings, job discovery, and worker job applications (/api/jobs/*).
+reviews.ts — manages customer reviews and ratings for completed services (/api/reviews/*).
+locations.ts — handles area selection and location-related search (/api/locations/*).
+chat.ts — provides the backend endpoint for Shramik Sahayak AI conversations (/api/chat).
+These are proposed route names; include only endpoints implemented in your actual backend.
+
+Services (/backend/src/services)
+authService.ts — handles authentication business logic, password verification, and session or token creation.
+workerService.ts — manages worker profiles, skills, trade categories, and availability.
+customerService.ts — manages customer profile information and customer-related operations.
+bookingService.ts — processes booking requests, availability checks, and booking status changes.
+jobService.ts — manages job creation, job discovery, and job-related operations.
+chatService.ts — connects the backend to the Gemini API and processes Shramik Sahayak requests.
+Background Jobs & Notifications
+Background processing can be added as Shramik grows to support:
+
+Booking reminders and status notifications.
+Availability updates.
+Scheduled cleanup of outdated data.
+Other asynchronous tasks that should not delay API responses.
+A queue system such as BullMQ with Redis may be introduced if background processing becomes necessary.
+
+AI Assistant Integration
+chatService.ts — prepares user messages and communicates with Gemini.
+chat.ts — exposes the chat endpoint to the frontend.
+Environment configuration — reads GEMINI_API_KEY on the server.
+Error handling — manages API failures and unavailable AI responses.
+The API key should never be exposed in frontend code or committed to the repository.
+
+Location & Worker Discovery
+locations.ts — accepts location or area search requests.
+locationUtils.ts — can contain location normalization and distance-calculation helpers.
+workerService.ts — retrieves workers matching a requested trade or service area.
+Accurate distance-based discovery requires real coordinates and a working location or geocoding implementation. A manually entered area or sample coordinate should not be presented as verified precise location data.
+
+Database Layer
+A proposed database structure may include the following models:
+
+User — account information and user role.
+WorkerProfile — trade, skills, experience, service area, and availability.
+CustomerProfile — customer-specific information.
+Job — job descriptions, requirements, and status.
+Booking — worker, customer, date, time slot, and booking status.
+Review — customer feedback associated with completed services.
+If PostgreSQL and Prisma are adopted, the schema and migrations can live under:
+
+backend/prisma/schema.prisma
+backend/prisma/migrations/
+Database queries can be organized under /backend/src/database, for example:
+
+workerQueries.ts
+customerQueries.ts
+jobQueries.ts
+bookingQueries.ts
+reviewQueries.ts
+These models and files are a suggested design, not confirmation that they already exist.
+
+Middleware & Helpers
+middleware/auth.ts — validates authentication tokens and protects private endpoints once authentication is implemented.
+helpers/passwordHelper.ts — provides secure password-hashing and verification utilities.
+helpers/tokenHelper.ts — manages token creation and verification if JWT authentication is used.
+helpers/responseHelper.ts — standardizes API response formats.
+utils/validation.ts — validates request data.
+utils/dateUtils.ts — formats dates and handles booking dates and time slots.
+utils/prisma.ts — exports a shared Prisma client if Prisma is configured.
+utils/asyncHandler.ts — simplifies asynchronous route error handling.
+Security, Logging & Operations
+Validate incoming requests on the server.
+Protect private endpoints with authentication and role-based authorization.
+Keep API keys and database credentials in environment variables.
+Avoid collecting or exposing unnecessary personal information.
+Record relevant application errors to support debugging.
+Use secure storage and access controls for any identity-verification data.
+Configure monitoring and automated deployment as the project grows.
+Implementation Status
+Shramik's current prototype uses React, TypeScript, Tailwind CSS, Vite, Express, and Gemini integration. The routes, services, database models, authentication middleware, and background jobs listed above describe the intended backend architecture and should be marked as implemented only after they have been built and tested.
+
+│image
+
+## API Reference
+API endpoints for connecting workers, customers, bookings, and AI assistance
+
+Note: These endpoints are a proposed API structure for Shramik. Update the table to match the routes actually implemented in your backend.
+
+GET Endpoints
+Endpoint	Description
+/api/workers	Retrieve the list of available workers
+/api/workers/:id	Get details of a specific worker
+/api/workers/:id/availability	View a worker's available time slots
+/api/bookings	Retrieve bookings for the authenticated user
+/api/bookings/:id	Get details of a specific booking
+/api/jobs	Retrieve available job opportunities for workers
+/api/locations	Retrieve supported service locations
+/api/health	Check backend service health
+POST Endpoints
+Endpoint	Description
+/api/auth/register	Register a new customer or worker
+/api/auth/login	Authenticate a registered user
+/api/workers	Create a worker profile
+/api/bookings	Create a service booking
+/api/jobs	Post a job opportunity
+/api/reviews	Submit a review for a completed service
+/api/chat	Send a message to Shramik Sahayak AI
+PATCH Endpoints
+Endpoint	Description
+/api/workers/:id	Update worker profile details
+/api/workers/:id/availability	Update worker availability
+/api/bookings/:id/status	Update booking status
+/api/jobs/:id/status	Update job status
+DELETE Endpoints
+Endpoint	Description
+/api/bookings/:id	Cancel a booking, subject to authorization rules
+/api/jobs/:id	Remove a job posting, subject to authorization rules
+Authentication and authorization: Protected endpoints should require an authenticated session or a valid token, such as Authorization: Bearer <token>, if JWT authentication is implemented. Users should only be able to access or modify records they are authorized to manage.
+
+Database Schema
+Suggested data model for connecting customers and skilled workers
+
+Table	Purpose
+users	Store account details and user roles
+worker_profiles	Store skills, experience, service areas, and profile information
+services	Maintain categories such as plumbing, painting, carpentry, and electrical work
+availability_slots	Store worker availability
+bookings	Track service requests, schedules, and booking statuses
+jobs	Store job opportunities posted by customers
+reviews	Store customer feedback and ratings
+locations	Store supported service areas
+chat_sessions	Store AI conversation metadata, if persistence is implemented
+Data integrity: Use unique identifiers, timestamps, appropriate relationships, and authorization checks. Personal information should be collected only when necessary and protected from unauthorized access.
+
+The tables above describe a proposed schema. They should not be presented as existing database tables until the database and migrations have been implemented.
+
+Deployment
+Suggested deployment architecture for Shramik
+
+Component	Possible Platform
+Frontend	Vercel or Netlify
+Backend API	Render or Railway
+Database	PostgreSQL on a managed database service, if configured
+AI Assistance	Google Gemini API
+File Storage	Cloudinary or another storage service, if profile uploads are supported
+Background Jobs	Redis-backed queue, if asynchronous jobs are implemented
+Monitoring	Hosting-provider logs and an error-monitoring service
+Frontend and backend deployments should be configured with the correct API URL, environment variables, CORS rules, and production build settings. Never expose secret API keys in frontend code.
+
+Project Limitations & Assumptions
+Shramik focuses on connecting customers with informal skilled workers in service categories such as plumbing, electrical work, painting, carpentry, tailoring, and masonry.
+The interface is designed to support Hindi and English.
+Worker availability and booking features depend on the backend and data persistence being configured correctly.
+Location-based search depends on the accuracy of the location data and the implementation of distance calculations.
+Worker identity verification should not be described as active unless a verification process has been implemented and tested.
+Ratings and reviews should represent genuine customer feedback, not sample or placeholder data.
+AI assistance depends on a valid Gemini API key, network access, API availability, and appropriate error handling.
+Database persistence, authentication, notifications, background jobs, and deployment integrations depend on the services actually configured.
+Shramik is an independent platform concept and should not be represented as affiliated with a government agency unless an official partnership exists.
+Users should be informed how their contact details, location, and booking information are used and protected.
+Future Improvements
+Implement secure registration, login, and role-based authorization.
+Add persistent storage for users, worker profiles, bookings, and reviews.
+Introduce a transparent worker verification process.
+Improve location-based worker discovery and service-area filtering.
+Add booking notifications and booking-status updates.
+Expand Shramik Sahayak with multilingual assistance and helpful service guidance.
+Add accessibility improvements for users with limited digital literacy.
+Introduce reporting and moderation tools to help address fraudulent profiles and inappropriate behavior.
+About
+Shramik (श्रमिक) is a skill-and-service platform concept designed to help customers discover local skilled workers and help workers find service opportunities.
+
+Tagline: Skill · Work · Trust
+
+Hindi motto: हर हुनर की पहचान, हर मेहनत का सम्मान।
+
+The goal is to make finding work and hiring skilled workers simpler, more accessible, and more transparent.
+
+Acknowledgements
+Built with the aim of making local work opportunities easier to discover and helping every skill receive the recognition it deserves.
