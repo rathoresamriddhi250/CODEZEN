@@ -1,0 +1,11 @@
+{
+  "name": "Shramik (श्रमिक) — Skill · Work · Trust",
+  "description": "Mobile-first local skilled trade discovery and slot booking platform connecting painters, carpenters, tailors, electricians, plumbers, and masons with nearby customers.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
